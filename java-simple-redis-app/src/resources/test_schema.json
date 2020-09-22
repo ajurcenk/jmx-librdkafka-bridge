@@ -1,0 +1,3 @@
+{"schema":"{\"type\":\"record\",\"name\":\"FOOBAR\",\"fields\":[{\"name\":\"ID\",\"type\":{\"type\":\"bytes\",\"scale\":0,\"precision\":64,\"connect.version\":1,\"connect.parameters\":{\"scale\":\"0\"}
+,\"connect.name\":\"org.apache.kafka.connect.data.Decimal\",\"logicalType\":\"decimal\"}},{\"name\":\"C1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"C2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"MODIFIED\",\"type\":{\"
+  type\":\"long\",\"connect.version\":1,\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"logicalType\":\"timestamp-millis\"}}],\"connect.name\":\"FOOBAR\"}"}

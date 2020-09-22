@@ -1,0 +1,368 @@
+{
+  "jmxPrefix": "test.metrics",
+  "categories": [
+    {
+      "level": "top",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Handle instance name",
+          "pos": 10
+        },
+        {
+          "name": "client_id",
+          "type": "string",
+          "description": "The configured (or default) client.id",
+          "pos": 20
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "Instance type (producer or consumer)",
+          "pos": 30
+        },
+        {
+          "name": "ts",
+          "type": "int",
+          "description": "librdkafka's internal monotonic clock (micro seconds)",
+          "pos": 40
+        },
+        {
+          "name": "time",
+          "type": "int",
+          "description": "Wall clock time in seconds since the epoch",
+          "pos": 50
+        },
+        {
+          "name": "replyq",
+          "type": "int",
+          "description": "Number of ops (callbacks, events, etc) waiting in queue for application to serve with rd_kafka_poll()",
+          "pos": 60
+        },
+        {
+          "name": "msg_cnt",
+          "type": "int",
+          "description": "Current number of messages in producer queues",
+          "pos": 70
+        },
+        {
+          "name": "msg_size",
+          "type": "int",
+          "description": "Current total size of messages in producer queues",
+          "pos": 80
+        },
+        {
+          "name": "msg_max",
+          "type": "int",
+          "description": "Threshold: maximum number of messages allowed allowed on the producer queues",
+          "pos": 90
+        },
+        {
+          "name": "msg_size_max",
+          "type": "int",
+          "description": "Threshold: maximum total size of messages allowed on the producer queues",
+          "pos": 100
+        },
+        {
+          "name": "tx",
+          "type": "int",
+          "description": "Total number of requests sent to Kafka brokers",
+          "pos": 110
+        },
+        {
+          "name": "tx_bytes",
+          "type": "int",
+          "description": "Total number of bytes transmitted to Kafka brokers",
+          "pos": 120
+        },
+        {
+          "name": "rx",
+          "type": "int",
+          "description": "Total number of responses received from Kafka brokers",
+          "pos": 125
+        },
+        {
+          "name": "rx_bytes",
+          "type": "int",
+          "description": "Total number of bytes received from Kafka brokers",
+          "pos": 130
+        },
+        {
+          "name": "txmsgs",
+          "type": "int",
+          "description": "Total number of messages transmitted (produced) to Kafka brokers",
+          "pos": 135
+        },
+        {
+          "name": "txmsg_bytes",
+          "type": "int",
+          "description": "Total number of message bytes (including framing, such as per-Message framing and MessageSet/batch framing) transmitted to Kafka brokers",
+          "pos": 140
+        },
+        {
+          "name": "rxmsgs",
+          "type": "int",
+          "description": "Total number of messages consumed, not including ignored messages (due to offset, etc), from Kafka brokers.",
+          "pos": 150
+        },
+        {
+          "name": "rxmsg_bytes",
+          "type": "int",
+          "description": "Total number of message bytes (including framing) received from Kafka brokers",
+          "pos": 160
+        },
+        {
+          "name": "simple_cnt",
+          "type": "int",
+          "description": "Internal tracking of legacy vs new consumer API state",
+          "pos": 170
+        },
+        {
+          "name": "metadata_cache_cnt",
+          "type": "int",
+          "description": "Number of topics in the metadata cache.",
+          "pos": 180
+        }
+      ]
+    },
+    {
+      "level": "broker",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Broker hostname, port and broker id",
+          "pos": 10
+        },
+        {
+          "name": "nodeid",
+          "type": "int",
+          "description": "Broker id (-1 for bootstraps)",
+          "pos": 20
+        },
+        {
+          "name": "nodename",
+          "type": "string",
+          "description": "Broker hostname",
+          "pos": 30
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "description": "roker source (learned, configured, internal, logical)",
+          "pos": 40
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "description": "Broker state (INIT, DOWN, CONNECT, AUTH, APIVERSION_QUERY, AUTH_HANDSHAKE, UP, UPDATE)",
+          "pos": 50
+        },
+        {
+          "name": "stateage",
+          "type": "string",
+          "description": "Time since last broker state change (microseconds)",
+          "pos": 60
+        },
+        {
+          "name": "outbuf_cnt",
+          "type": "int",
+          "description": "Number of requests awaiting transmission to broker",
+          "pos": 70
+        },
+        {
+          "name": "outbuf_msg_cnt",
+          "type": "int",
+          "description": "Number of messages awaiting transmission to broker",
+          "pos": 80
+        },
+        {
+          "name": "waitresp_cnt",
+          "type": "int",
+          "description": "Number of requests in-flight to broker awaiting response",
+          "pos": 90
+        },
+        {
+          "name": "waitresp_msg_cnt",
+          "type": "int",
+          "description": "Number of messages in-flight to broker awaitign response",
+          "pos": 100
+        },
+        {
+          "name": "tx",
+          "type": "int",
+          "description": "Total number of requests sent",
+          "pos": 110
+        },
+        {
+          "name": "txbytes",
+          "type": "int",
+          "description": "Total number of bytes sent",
+          "pos": 120
+        },
+        {
+          "name": "txerrs",
+          "type": "int",
+          "description": "Total number of transmission errors",
+          "pos": 130
+        },
+        {
+          "name": "txretries",
+          "type": "int",
+          "description": "Total number of request retries",
+          "pos": 140
+        },
+        {
+          "name": "req_timeouts",
+          "type": "int",
+          "description": "Total number of requests timed out",
+          "pos": 150
+        },
+        {
+          "name": "rx",
+          "type": "int",
+          "description": "Total number of responses received",
+          "pos": 160
+        },
+        {
+          "name": "rxbytes",
+          "type": "int",
+          "description": "Total number of bytes received",
+          "pos": 170
+        },
+        {
+          "name": "rxerrs",
+          "type": "int",
+          "description": "Total number of receive errors",
+          "pos": 180
+        },
+        {
+          "name": "rxcorriderrs",
+          "type": "int",
+          "description": "Total number of unmatched correlation ids in response (typically for timed out requests)",
+          "pos": 190
+        },
+        {
+          "name": "rxpartial",
+          "type": "int",
+          "description": "Total number of partial MessageSets received. The broker may return partial responses if the full MessageSet could not fit in remaining Fetch response size.",
+          "pos": 200
+        },
+        {
+          "name": "zbuf_grow",
+          "type": "int",
+          "description": "Total number of decompression buffer size increases",
+          "pos": 210
+        },
+        {
+          "name": "buf_grow",
+          "type": "int",
+          "description": "Total number of buffer size increases (deprecated, unused)",
+          "pos": 220
+        },
+        {
+          "name": "wakeups",
+          "type": "int",
+          "description": "Broker thread poll wakeups",
+          "pos": 230
+        },
+        {
+          "name": "connects",
+          "type": "int",
+          "description": "Number of disconnects (triggered by broker, network, load-balancer, etc.).",
+          "pos": 240
+        }
+      ]
+    },
+    {
+      "level": "window_stats",
+      "properties": [
+        {
+          "name": "min",
+          "type": "int",
+          "description": "Smallest value",
+          "pos": 10
+        },
+        {
+          "name": "max",
+          "type": "int",
+          "description": "Largest value",
+          "pos": 20
+        },
+        {
+          "name": "avg",
+          "type": "int",
+          "description": "Average value",
+          "pos": 30
+        },
+        {
+          "name": "sum",
+          "type": "int",
+          "description": "Sum of values",
+          "pos": 40
+        },
+        {
+          "name": "cnt",
+          "type": "int",
+          "description": "Number of values sampled",
+          "pos": 50
+        },
+        {
+          "name": "stddev",
+          "type": "int",
+          "description": "Standard deviation (based on histogram)",
+          "pos": 60
+        },
+        {
+          "name": "hdrsize",
+          "type": "int",
+          "description": "Memory size of Hdr Histogram",
+          "pos": 70
+        },
+        {
+          "name": "p50",
+          "type": "int",
+          "description": "50th percentile",
+          "pos": 80
+        },
+        {
+          "name": "p75",
+          "type": "int",
+          "description": "p75 percentile",
+          "pos": 90
+        },
+        {
+          "name": "p90",
+          "type": "int",
+          "description": "90th percentile",
+          "pos": 100
+        },
+        {
+          "name": "p95",
+          "type": "int",
+          "description": "p95 percentile",
+          "pos": 110
+        },
+        {
+          "name": "p99",
+          "type": "int",
+          "description": "p99 percentile",
+          "pos": 120
+        },
+        {
+          "name": "p99_99",
+          "type": "int",
+          "description": "p99_99 percentile",
+          "pos": 130
+        },
+        {
+          "name": "outofrange",
+          "type": "int",
+          "description": "Values skipped due to out of histogram range",
+          "pos": 140
+        }
+      ]
+    }
+  ]
+}

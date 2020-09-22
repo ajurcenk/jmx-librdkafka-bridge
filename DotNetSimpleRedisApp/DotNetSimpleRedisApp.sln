@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSender", "RedisSender\RedisSender.csproj", "{584FAF6A-4517-46C8-80FD-06859C2E3E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisPublisher", "RedisPublisher\RedisPublisher.csproj", "{F42EFF1E-23EC-4714-9399-37067E391BD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaProducer", "KafkaProducer\KafkaProducer.csproj", "{2E2DC862-F215-42F6-9FB1-580F3203C8CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{584FAF6A-4517-46C8-80FD-06859C2E3E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584FAF6A-4517-46C8-80FD-06859C2E3E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584FAF6A-4517-46C8-80FD-06859C2E3E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584FAF6A-4517-46C8-80FD-06859C2E3E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42EFF1E-23EC-4714-9399-37067E391BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42EFF1E-23EC-4714-9399-37067E391BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42EFF1E-23EC-4714-9399-37067E391BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42EFF1E-23EC-4714-9399-37067E391BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2DC862-F215-42F6-9FB1-580F3203C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2DC862-F215-42F6-9FB1-580F3203C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2DC862-F215-42F6-9FB1-580F3203C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2DC862-F215-42F6-9FB1-580F3203C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
